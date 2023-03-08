@@ -50,10 +50,12 @@ public class Main {
         double myLunchPrice= (13.50);
         int myAge=(18);
         boolean hasHadLunchToday= (true);
-        System.out.println("I am " + myAge + " years old");
+        System.out.println("I am: ");
+        System.out.println(myAge);
         System.out.println("Had I lunch?");
         System.out.println(hasHadLunchToday);
-        System.out.println("My lunch price: " + myLunchPrice );
+        System.out.println("My lunch price: ");
+        System.out.println(myLunchPrice);
 
     }
 
