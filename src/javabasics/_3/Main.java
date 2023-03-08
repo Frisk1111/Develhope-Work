@@ -20,7 +20,7 @@ public class Main {
 
 
     /**
-     * 2: Print out your age as an int literal, i.e. 28, then print whether or not you've
+     * 2: Print out your age as an int literal, i.e. 28, then print whenever or not you've
      * had lunch today as a boolean literal i.e. true, false, then print the price of
      * your lunch as a double, i.e. 4.99
      */
@@ -39,7 +39,6 @@ public class Main {
     /**
      * 3: Complete exercise 2, but store the values in a variable.
      * And then print out the variable.
-     *
      * i.e.
      * char favouriteLetter = 'g';
      * System.out.print("My favourite letter=");
