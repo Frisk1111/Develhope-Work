@@ -14,7 +14,7 @@ public class Main {
      */
     private static void exercise1() {
         System.out.println("\nExercise 1:");
-        int porridgeHeatInCentigrade = 60; // <--- Change this value
+        int porridgeHeatInCentigrade = 60; // <--- Change this value per stampa "Just right"
 
         if (porridgeHeatInCentigrade < 60) {
             System.out.println("Too cold!");
@@ -35,12 +35,12 @@ public class Main {
         System.out.println("\nExercise 2:");
         double remainingMoney = 4.0;
         double lunchCost = 5.0;
-        boolean isLunchtime = remainingMoney >= lunchCost;
+        boolean isLunchtime = remainingMoney >= lunchCost; //per vedere se è maggiore il costo del pranzo
         // Your if statement here
         if (isLunchtime){
-            System.out.println("Lunch time!");
+            System.out.println("Lunch time!"); //cosa stampa se abbiamo abbastanza soldi
         } else {
-            System.out.println("You go hungry today!");
+            System.out.println("You go hungry today!"); //cosa stampa se abbiamo pochi soldi
         }
 
     }
@@ -56,19 +56,19 @@ public class Main {
      */
     private static void exercise3() {
         System.out.println("\nExercise 3:");
-        double ourDouble = 0.5;
+        double ourDouble = 2.5;
         //Write your code here
-        boolean ourDoubleGreaterThan = ourDouble > 2.5;
-        boolean ourDoubleLessThan = ourDouble < 2.5;
+        boolean ourDoubleGreaterThan = ourDouble > 2.5; //x vedere se è maggiore
+        boolean ourDoubleLessThan = ourDouble <= 2.5; //x vede se è minore
         if (ourDoubleGreaterThan){
-            System.out.println("Greater than 2.5");
+            System.out.println("Greater than 2.5"); //cosa stampa se è maggiore
         } else if (ourDoubleLessThan) {
-            ourDouble =+ 1.0;
-            boolean check = ourDouble > 2.5;
+            double add = ourDouble + 1.0; //aggiungere 1 se è minore
+            boolean check = add > 2.5; //check x vede se ora è maggiore o no
             if (check){
-                System.out.println("Now greater than 2.5");
+                System.out.println("Now greater than 2.5"); //cosa stampa se è maggiore
             } else {
-                System.out.println("Still less than 2.5");
+                System.out.println("Still less than 2.5"); //cosa stampa se è ancora min
             }
         }
 
