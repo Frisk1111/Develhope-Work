@@ -162,7 +162,7 @@ public class Main {
             for (timesTableNumber = 3; timesTableNumber <=30 ; timesTableNumber+=3) {
                 System.out.println(timesTableNumber);
             }
-            System.out.println("\n tab : 4");
+            System.out.println("\n tab :  4");
 
             for (timesTableNumber = 4; timesTableNumber <=40 ; timesTableNumber+=4) {
                 System.out.println(timesTableNumber);
