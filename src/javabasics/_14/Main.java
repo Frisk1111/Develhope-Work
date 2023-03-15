@@ -140,7 +140,7 @@ public class Main {
     /**
      * 5: BONUS! This is an optional task, but it is recommended you complete it
      * -------------------------------------------------------------------------<br/>
-     * Inside of the fori loop below, write another fori loop to complete all
+     * Inside of the for-i loop below, write another for-i loop to complete all
      * the multiplication tables between 1-10.
      * i.e. 5  = 5,10,15,20,25,30,35,40,45,50
      * When a loop in inside a loop, we call this a nested loop
@@ -151,6 +151,51 @@ public class Main {
         for (int timesTableNumber = 1; timesTableNumber <= 10; timesTableNumber++) {
             // Your for I loop here
 
+
+            System.out.println("\n tab : 2");
+
+            for (timesTableNumber = 2; timesTableNumber <=20 ; timesTableNumber+=2) {
+                System.out.println(timesTableNumber);
+            }
+            System.out.println("\n tab : 3");
+
+            for (timesTableNumber = 3; timesTableNumber <=30 ; timesTableNumber+=3) {
+                System.out.println(timesTableNumber);
+            }
+            System.out.println("\n tab : 4");
+
+            for (timesTableNumber = 4; timesTableNumber <=40 ; timesTableNumber+=4) {
+                System.out.println(timesTableNumber);
+            }
+            System.out.println("\n tab : 5");
+
+            for (timesTableNumber = 5; timesTableNumber <=50 ; timesTableNumber+=5) {
+                System.out.println(timesTableNumber);
+            }
+            System.out.println("\n tab : 6");
+            for (timesTableNumber = 6; timesTableNumber <=60 ; timesTableNumber+=6) {
+                System.out.println(timesTableNumber);
+            }
+            System.out.println("\n tab : 7");
+
+            for (timesTableNumber = 7; timesTableNumber <=70 ; timesTableNumber+=7) {
+                System.out.println(timesTableNumber);
+            }
+            System.out.println("\n tab : 8");
+
+            for (timesTableNumber = 8; timesTableNumber <=80 ; timesTableNumber+=8) {
+                System.out.println(timesTableNumber);
+            }
+            System.out.println("\n tab : 9");
+
+            for (timesTableNumber = 9; timesTableNumber <=90 ; timesTableNumber+=9) {
+                System.out.println(timesTableNumber);
+            }
+            System.out.println("\n tab : 10");
+
+            for (timesTableNumber = 10; timesTableNumber <=100 ; timesTableNumber+=10) {
+                System.out.println(timesTableNumber);
+            }
         }
     }
 }
