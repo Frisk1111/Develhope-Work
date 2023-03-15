@@ -65,6 +65,9 @@ public class Main {
 
          if (mealType.contains("sandwich")){
              weight *=5; //peso sandwich moltiplicato x5!
+             if(weight < 5){
+                 weight = 5;
+             }
          } else if (mealType.contains("soup") ){
              weight *= 3;   //peso zuppa moltiplicato x3!
              if(weight < 5){ //se il peso è min di 5 allora lo faccio diventare 5!
