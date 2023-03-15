@@ -114,6 +114,7 @@ public class Main {
         ) {
             System.out.println(names.get(index));
         }
+
     }
 
     /**
@@ -148,54 +149,19 @@ public class Main {
     private static void exercise5() {
         System.out.println("\nExercise 5:");
 
-        for (int timesTableNumber = 1; timesTableNumber <= 10; timesTableNumber++) {
-            // Your for I loop here
+//        for (int timesTableNumber = 1; timesTableNumber <= 10; timesTableNumber++) {
+//            // Your for I loop here
+//            System.out.println(timesTableNumber);
+//        }
+        
+        
+        for(int moltiplicando = 1; moltiplicando <= 10; moltiplicando++){
+            for (int moltiplicatore  = 1; moltiplicatore <= 10 ; moltiplicatore++) {
+                int risultato= moltiplicando * moltiplicatore;      //così va meglio? :p
 
-
-            System.out.println("\n tab : 2");
-
-            for (timesTableNumber = 2; timesTableNumber <=20 ; timesTableNumber+=2) {
-                System.out.println(timesTableNumber);
-            }
-            System.out.println("\n tab : 3");
-
-            for (timesTableNumber = 3; timesTableNumber <=30 ; timesTableNumber+=3) {
-                System.out.println(timesTableNumber);
-            }
-            System.out.println("\n tab :  4");
-
-            for (timesTableNumber = 4; timesTableNumber <=40 ; timesTableNumber+=4) {
-                System.out.println(timesTableNumber);
-            }
-            System.out.println("\n tab : 5");
-
-            for (timesTableNumber = 5; timesTableNumber <=50 ; timesTableNumber+=5) {
-                System.out.println(timesTableNumber);
-            }
-            System.out.println("\n tab : 6");
-            for (timesTableNumber = 6; timesTableNumber <=60 ; timesTableNumber+=6) {
-                System.out.println(timesTableNumber);
-            }
-            System.out.println("\n tab : 7");
-
-            for (timesTableNumber = 7; timesTableNumber <=70 ; timesTableNumber+=7) {
-                System.out.println(timesTableNumber);
-            }
-            System.out.println("\n tab : 8");
-
-            for (timesTableNumber = 8; timesTableNumber <=80 ; timesTableNumber+=8) {
-                System.out.println(timesTableNumber);
-            }
-            System.out.println("\n tab : 9");
-
-            for (timesTableNumber = 9; timesTableNumber <=90 ; timesTableNumber+=9) {
-                System.out.println(timesTableNumber);
-            }
-            System.out.println("\n tab : 10");
-
-            for (timesTableNumber = 10; timesTableNumber <=100 ; timesTableNumber+=10) {
-                System.out.println(timesTableNumber);
+                System.out.println("\n" + moltiplicatore + " * " + moltiplicando + " fa= " + risultato);
             }
         }
     }
+
 }
