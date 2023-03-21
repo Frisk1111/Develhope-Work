@@ -21,10 +21,9 @@ public class Exercises {
 
     /**
      * 2: use the class called 'Student', add variables
-     *    (class variables are called 'fields' or 'attributes')
-     *    called 'name' and 'age'
-     *    Using the function below set the student name and ages
-     *
+     * (class variables are called 'fields' or 'attributes')
+     * called 'name' and 'age'
+     * Using the function below set the student name and ages
      */
     private static void exercise2() {
         System.out.println("Exercise 2:");
@@ -34,7 +33,7 @@ public class Exercises {
         // Use a for i loop
 
 
-        for( int i= 0; i < studentNames.size(); i++ ) { //basta farlo SOLO UNA VOLTA così da assegnare la i anche a ages
+        for (int i = 0; i < studentNames.size(); i++) { //basta farlo SOLO UNA VOLTA assegno poi la 'i'  anche a 'studentAges'
 
             System.out.println(createNewStudent(studentNames.get(i), studentAges.get(i))); //richiamo la funzione 'createNewStudent'
             // e nella parentesi gli assegno gli INDICI di studentNames e studentAges!!
@@ -46,12 +45,11 @@ public class Exercises {
         Student student = new Student();
 
         // Write your code here
-        student.name = name ; //COSì RICHIAMO i valori di name DALLA CLASSE STUDENT!!
-        student.age = age;  //STESSA COSA QUA!!
+        student.name = name; //COSì RICHIAMO le variabili DALLA CLASSE STUDENT!!
+        student.age = age;  //STESSA COSA QUA!! -- così cambio i loro valori in QUESTA classe
 
 
-
-        return student;//il return perchè NON è void!!
+        return student;//il return perchè NON è una funzione void!!
 
 
     }
@@ -83,31 +81,39 @@ public class Exercises {
         System.out.println("\nExercise 3:");
 
         // Write your code here
-        List<Student>  students = new ArrayList<>();
+        Course corso = new Course();
+        corso.maxStudents = 30;
+
+
         List<String> studentNames = Arrays.asList("Alice", "Aragon", "Alex");
         List<Integer> studentAges = Arrays.asList(23, 31, 38);
 
 
-        for(int i= 0; i < studentNames.size(); i++){
+        for (int i = 0; i < studentNames.size(); i++) {
             Student student = createNewStudent(studentNames.get(i), studentAges.get(i)); //creiamo una nuova variabile di tipo STUDENT
-              // e dentro richiamiamo la funzione di prima per poi di nuovo assegnargli gli INDICI di studentNames e Ages
-            students.add(student); //con add lo aggiungiamo all'array 'students' la variabile di prima
+            // e dentro richiamiamo la funzione di prima per poi di nuovo assegnargli gli INDICI di studentNames e Ages
+            corso.students.add(student); //con add  aggiungiamo all'array 'students' --presente nella classe COURSE! -- la variabile di prima ('student')
         }
-        System.out.println(students);
+        System.out.println("studenti presenti:" + corso.students +
+                "\nnumero massimo degli studenti: " + corso.maxStudents);
 
 
-      int mediaEta = 0;
 
-        for(Integer mediaEta1 : studentAges){
+
+        int mediaEta = 0;
+
+        for (Integer mediaEta1 : studentAges) {
             mediaEta += mediaEta1;  //prendo la variabile definita nello scope globale
-                  // e gli assegno i valori dell'oggetto con il '+=' così non solo gli vengono assegnati ma li somma tra loro come nel _14!!
+            // e gli assegno i valori dell'oggetto con il '+=' così non solo gli vengono assegnati ma li somma tra loro come nel _14!!
         }
         double mediaEtaComeDouble = Double.valueOf(mediaEta); //lo trasformiamo in un double!
         mediaEtaComeDouble /= studentAges.size();
 
-        System.out.println(mediaEtaComeDouble);
-
+        System.out.println("età media degli studenti : " + mediaEtaComeDouble);
 
 
     }
 }
+
+
+
