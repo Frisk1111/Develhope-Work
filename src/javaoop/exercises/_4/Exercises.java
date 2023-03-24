@@ -17,16 +17,17 @@ public class Exercises {
      */
 
 
-    private static int totalCount;
-    private static int luckyRolls;
 
     public static void exercise1() {
         System.out.println("Exercise 1:");
 
+         int totalCount = 0;
 
 
         for (int i = 0; i < 100; i++) {
+            int luckyRolls = 0;
             while (rollD6() == 6) {
+
                 luckyRolls++;
 
             }
@@ -52,6 +53,7 @@ public class Exercises {
      * 2b: Now change these modifiers to the MINIMUM possible scope, to have no errors
      */
     public static void exercise2() {
+
         System.out.println("\nExercise 2:");
         ExerciseLunch exerciseLunch = new ExerciseLunch(3.4, "Tuesday");
         exerciseLunch.setLunchWeightInGrams(500);
@@ -64,10 +66,11 @@ public class Exercises {
      *    Only make edits that remove or add the words, static or final
      */
     public static void exercise3() {
-         ExerciseLunch exerciseLunch = null; //rimosso 'final'
+          ExerciseLunch exerciseLunch = null; //rimosso 'final'
 
         exerciseLunch = new ExerciseLunch(3.4, "Tuesday");
         ExerciseLunch.printMaxPrice();
+
     }
 
     /**
@@ -79,17 +82,24 @@ public class Exercises {
 
     //valori costanti
 
-    private static final String TIME_PASSED =" Time passed since New Year's Eve"; //provaa
+    private static final String TIME_PASSED = " Time passed since New Year's Eve ";
+    private static final Integer MAX_WEEK_IN_YEAR = 52;
+
+    private static final Integer MAX_DAY_IN_A_WEEK = 7;
+
+    private static final Integer MAX_HOUR_IN_A_DAY = 24;
+
+
     //.
 
     public static void exercise4() {
         System.out.println("\nExercise 4:");
 
 
-        for (int week = 0; week < 52; week++) {
+        for (int week = 0; week < MAX_WEEK_IN_YEAR; week++) {
 
-            for (int day = 0; day < 7; day++) {
-                for (int hour = 0; hour < 24; hour++) {
+            for (int day = 0; day < MAX_DAY_IN_A_WEEK; day++) {
+                for (int hour = 0; hour < MAX_HOUR_IN_A_DAY; hour++) {
                     System.out.println(" Week " + week +", day " + day +", hour " + hour + TIME_PASSED );
                 }
 

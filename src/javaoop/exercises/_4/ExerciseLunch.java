@@ -9,12 +9,12 @@ public class ExerciseLunch {
 
     private int numberOfTimesWeHaveGotPrice = 0;
 
-    ExerciseLunch(Double price, String nameOfDayEaten) { //rimosso 'private'
+      ExerciseLunch(Double price, String nameOfDayEaten) { //rimosso 'private' - esercizio 2
         this.price = price;
         this.nameOfDayEaten = nameOfDayEaten;
     }
 
-    public static void  printMaxPrice() { //inserito 'static'
+    public static void  printMaxPrice() { //inserito 'static' - esercizio 3
         System.out.println(MAX_PRICE);
     }
 
@@ -34,7 +34,7 @@ public class ExerciseLunch {
         }
     }
 
-     Double getPrice() { //rimosso 'private'
+     Double getPrice() { //rimosso 'private' - esercizio 2
         numberOfTimesWeHaveGotPrice = numberOfTimesWeHaveGotPrice + 1;
         return this.price;
     }
@@ -43,7 +43,7 @@ public class ExerciseLunch {
         return this.numberOfTimesWeHaveGotPrice;
     }
 
-    String getNameOfDayEaten() { //reso defualt
+    String getNameOfDayEaten() { //rimosso 'private' - esercizio 2
         return nameOfDayEaten;
     }
 
@@ -59,7 +59,7 @@ public class ExerciseLunch {
         this.nameOfDayEaten = nameOfDayEaten;
     }
 
-    void setLunchWeightInGrams(int lunchWeightInGrams) {
+    void setLunchWeightInGrams(int lunchWeightInGrams) { //rimosso 'private' - esercizio 2
         this.lunchWeightInGrams = lunchWeightInGrams;
     }
 
