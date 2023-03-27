@@ -32,9 +32,9 @@ public class Exercises {
         ourSet.add(1);
 
 
-        //.
+        //END
 
-        if (ourSet.containsAll(Set.of(1, 5, 2))) { // erano  presenti troppi 1 nella condizione!
+        if (ourSet.containsAll(Set.of(1, 5, 2))) { // erano presenti troppi '1' nella condizione!
             System.out.println("1a. Set contains all numbers");
         } else {
             System.out.println("1a. Set does not contain all numbers");
@@ -44,9 +44,9 @@ public class Exercises {
 
         // Remove the element '1'
         // Your code
-        ourSet.remove(1);
+        ourSet.remove(1); //per rimuovere vari elementi
 
-        //.
+        //end
 
         System.out.println(ourSet);
 
@@ -73,7 +73,7 @@ public class Exercises {
 
         fruitsSet.addAll(fruitsSet); //qua prova a rimetterli solo che essendo un set i rimuove!
 
-        //2a. What will this output? [ banana, orange, appple, kiwi, mango ]
+        //2a. What will this output? [ banana, orange, apple, kiwi, mango ]
         System.out.println(fruitsSet);
 
         List<String> fruitsList = List.of("apple", "banana", "grapes", "pear", "mango");
@@ -93,11 +93,11 @@ public class Exercises {
         int max = Integer.MAX_VALUE;
         int min = Integer.MIN_VALUE;
 
-        Set<Integer> numero = new TreeSet<>(); //così abbiamo i valori in ordine!
-        numero.addAll(numbers); //aggiungiamo i valori di 'numbers' a 'numero'
+        Set<Integer> numero = new TreeSet<>(); //così abbiamo i valori in ordine! i TreeSet hanno SEMPRE i numeri in ordine
+        numero.addAll(numbers); //aggiungiamo TUTTI i valori di 'numbers' a 'numero'
 
 
-        for (Integer number : numbers) {
+        for (Integer number : numbers) {//così number avrà gli stessi valori di numbers!
             // Your code
 
             for (Integer numeri2 : numero) {//altro ciclo each per assegnare a un oggetto i valori di 'numero'
@@ -107,9 +107,9 @@ public class Exercises {
                     // continua a ogni loop a cambiare la posizione dei numeri! però il mio ragionamento va!
                 }
 
-                if (numeri2 < number) { //qua faccio la comparazione tra i due oggetti
-                    min = numeri2; // stessa cosa qua, visto che 'number' a i valori di un set normale
-                     // ogni tanto vengono in ordine altre volte no!
+                if (numeri2 < number) { //qua faccio la comparazione tra i due oggetti metto prima numeri2 avendo i numeri in ordine!
+                    min = numeri2; // assegno a min il valore di numeri2 che sarà per forza di cose IL PIù PICCOLO
+                     //
 
                     break;
                 }
@@ -123,9 +123,11 @@ public class Exercises {
 
             System.out.println(max + " " + min); //fatto per vede' che cacchio succede dentro il loop
 
-            //.
+
         }
-        //System.out.println(max + " " + min);
+        System.out.println("\n RISULTATO FINALE: "+max + " " + min);
+       //END
+
 
         if (max != 10 || min != 1) {
             System.out.println("3a. Incorrect min or max values");
@@ -155,15 +157,14 @@ public class Exercises {
 
         }
 
-        //.
+        //END
 
         if (!itemsContainedInBothSets.equals(Set.of(5, 6, 7, 8, 9, 10))) {
             System.out.println("3b. Incorrect number of items in itemsContainedInBothSets");
 
-            System.out.println("\n numeri aggiunti a 'itemsContainedInBothSets ' "
-                    + itemsContainedInBothSets ); //aggiunto!!
+
         } else {
-            System.out.println("3b. Correct number of items in itemsContainedInBothSets");
+            System.out.println("\n 3b. Correct number of items in itemsContainedInBothSets");
         }
     }
 
@@ -183,15 +184,16 @@ public class Exercises {
                                               //i valori di 'orderedNumbers'
 
             if(min > numeri){ //se min è maggiore di numeri - cioè sempre! -
-                min = numeri; //ALLORA assegna a min il valore minore di 'numeri'
+                min = numeri; //ALLORA assegna a min il valore di 'numeri' che sarà quello PIù PICCOLO tra tutti!!
             }
 
 
         }
 
-        System.out.println("\n risultato esercizio 4.a : " +min); //prova x vedere il risultato finale
+        System.out.println("\n risultato esercizio 4.a : " +min); //prova x vedere il risultato finale -
+        // fatto fuori dal loop così vediamo il RISULTATO FINALE!
 
-        //.
+        //END
 
         if (min != 1) {
             System.out.println("4a. Incorrect min value");
