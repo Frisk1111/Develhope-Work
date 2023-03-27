@@ -93,25 +93,39 @@ public class Exercises {
         int max = Integer.MAX_VALUE;
         int min = Integer.MIN_VALUE;
 
+        Set<Integer> numero = new TreeSet<>(); //così abbiamo i valori in ordine!
+        numero.addAll(numbers); //aggiungiamo i valori di 'numbers' a 'numero'
+
 
         for (Integer number : numbers) {
             // Your code
 
+            for (Integer numeri2 : numero) {//altro ciclo each per assegnare a un oggetto i valori di 'numero'
 
-            if(number > min){
-                max = number; //avvolte mi dà il 10 altre volte no- penso perché essendo un Set
-                             // continua a ogni loop a cambiare la posizione dei numeri! però il mio ragionamento va!
+                if (numeri2 > number) {
+                    max = numeri2; //avvolte mi dà il 10 altre volte no- penso perché essendo un Set
+                    // continua a ogni loop a cambiare la posizione dei numeri! però il mio ragionamento va!
+                }
+
+                if (numeri2 < number) { //qua faccio la comparazione tra i due oggetti
+                    min = numeri2; // stessa cosa qua, visto che 'number' a i valori di un set normale
+                     // ogni tanto vengono in ordine altre volte no!
+
+                    break;
+                }
+
             }
-            if(number < max){ //eppure qua dovrebbe esse' giusto ma perché non vieneee :,(((
-                min = number; // mi continua a dare il valore di 'min' di primaa non capisco rip
-            }
+
+
+
+
 
 
             System.out.println(max + " " + min); //fatto per vede' che cacchio succede dentro il loop
 
             //.
         }
-        System.out.println(max + " " + min);
+        //System.out.println(max + " " + min);
 
         if (max != 10 || min != 1) {
             System.out.println("3a. Incorrect min or max values");
@@ -138,8 +152,6 @@ public class Exercises {
                 }
 
             }
-            System.out.println("\n numeri aggiunti a 'itemsContainedInBothSets ' "
-                    + itemsContainedInBothSets ); //per vedere cosa fa a ogni ciclo!
 
         }
 
@@ -147,6 +159,9 @@ public class Exercises {
 
         if (!itemsContainedInBothSets.equals(Set.of(5, 6, 7, 8, 9, 10))) {
             System.out.println("3b. Incorrect number of items in itemsContainedInBothSets");
+
+            System.out.println("\n numeri aggiunti a 'itemsContainedInBothSets ' "
+                    + itemsContainedInBothSets ); //aggiunto!!
         } else {
             System.out.println("3b. Correct number of items in itemsContainedInBothSets");
         }
@@ -164,7 +179,7 @@ public class Exercises {
         int min = Integer.MAX_VALUE;
         // Your code
 
-        for (Integer numeri : orderedNumbers){ //ciclo for each - assegnamo all'oggetto 'numeri'
+        for (Integer numeri : orderedNumbers){ //ciclo for each - assegniamo all'oggetto 'numeri'
                                               //i valori di 'orderedNumbers'
 
             if(min > numeri){ //se min è maggiore di numeri - cioè sempre! -
@@ -174,7 +189,7 @@ public class Exercises {
 
         }
 
-        System.out.println("\n risultato esercizio 4.a :" +min); //prova x vedere il risultato finale
+        System.out.println("\n risultato esercizio 4.a : " +min); //prova x vedere il risultato finale
 
         //.
 
