@@ -22,6 +22,10 @@ public class Exercises {
         System.out.println("Exercise 1: ");
         Set<Integer> ourSet = new HashSet<>();
 
+        //i Set provvedono a levare i 'doppioni' e a tenere valori "unici"
+        //gli HashSet sono un tipo di Set - in generale i Set 'scambiano' le posizioni dei vari elementi
+
+
         // Add some numbers using the add method
         // Your code
 
@@ -93,23 +97,32 @@ public class Exercises {
         int max = Integer.MAX_VALUE;
         int min = Integer.MIN_VALUE;
 
-        Set<Integer> numero = new TreeSet<>(); //così abbiamo i valori in ordine! i TreeSet hanno SEMPRE i numeri in ordine
+        // Your code
+
+
+        //così abbiamo i valori in ordine! i TreeSet hanno SEMPRE i numeri in ordine
+        Set<Integer> numero = new TreeSet<>();
+
         numero.addAll(numbers); //aggiungiamo TUTTI i valori di 'numbers' a 'numero'
 
+        //così number avrà gli stessi valori di numbers!
+        for (Integer number : numbers) {
 
-        for (Integer number : numbers) {//così number avrà gli stessi valori di numbers!
-            // Your code
-
-            for (Integer numeri2 : numero) {//altro ciclo each per assegnare a un oggetto i valori di 'numero'
+            //altro ciclo each per assegnare a un oggetto i valori di 'numero'
+            for (Integer numeri2 : numero) {
 
                 if (numeri2 > number) {
                     max = numeri2; //avvolte mi dà il 10 altre volte no- penso perché essendo un Set
                     // continua a ogni loop a cambiare la posizione dei numeri! però il mio ragionamento va!
                 }
 
-                if (numeri2 < number) { //qua faccio la comparazione tra i due oggetti metto prima numeri2 avendo i numeri in ordine!
-                    min = numeri2; // assegno a min il valore di numeri2 che sarà per forza di cose IL PIù PICCOLO
-                     //
+
+                // qua faccio la comparazione tra i due oggetti metto prima 'numeri2'
+                // visto che mostra i numeri in ordine!
+                if (numeri2 < number) {
+
+                    // assegno a min il valore di numeri2 che sarà per forza di cose IL PIù PICCOLO
+                    min = numeri2;
 
                     break;
                 }
