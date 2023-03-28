@@ -102,9 +102,18 @@ public class Exercises {
 
         // Your code here
 
+        //per vedere le volte ripetute (??)
+        wordCount.put("contatore", 0);
 
 
+        //ciclo for each
+        for (String parole: words) {
 
+            //assegno e 'sommo' 'parole' con 'str'
+            parole = str;
+
+
+        }
 
 
         //END
