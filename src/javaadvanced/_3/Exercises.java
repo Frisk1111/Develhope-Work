@@ -68,22 +68,34 @@ public class Exercises {
 
 
 
+        //creo due set dove richiamerò la funzione "toSet" per convertire 'list' e 'set'
+        //Per fare ciò dovrò metterli nelle parentesi tonde ti 'toSet' - come parametri- !
+
+     Set <String> lista = toSet(list);
+     Set <String> set2 = toSet(set);
 
 
+        System.out.println("\n" + lista);
+
+        System.out.println("\n" + set2);
 
         //END
 
-        toSet(list); //boh dovrebbe convertirlo ma non lo fa - 'fanculo
-        toSet(set);
+
+
     }
 
 
 
     // Write your method for exercise 2 here
-    private static void toSet(Collection<String> collection) {
 
-
-        System.out.println("\n" + collection);
+    //creo quindi una funzione privata e statica che sia un set di tipo stringa
+    //e di nome 'toSet' - nelle parentesi richiamo 'collection' così che posso convertire
+    // senza problemi sia la lista che il set iniziali
+    //faccio poi il return richiamando il costruttore di 'HashSet' e tra le parentesi tonde ritorno il
+    //parametro!
+    private static Set <String> toSet(Collection <String> collezione){
+        return new HashSet<>(collezione);
     }
 
     //END
@@ -102,15 +114,40 @@ public class Exercises {
 
         // Your code here
 
-        //per vedere le volte ripetute (??)
-        wordCount.put("contatore", 0);
+        //key e valore per la map!
+        // 'if no previous value exists, use 0 as the previous value.'
+        //wordCount.put("contatore", 0);
 
 
-        //ciclo for each
-        for (String parole: words) {
+        //primo ciclo for each
+        for (String word : words) {
 
-            //assegno e 'sommo' 'parole' con 'str'
-            parole = str;
+            //così nel put metto i valori di word! ovvero li stessi di words!!
+            //lo metto come key visto che word e una lista di tipo string e la map di 'wordCount'
+            //ha la key di tipo string!!
+            wordCount.put(word, 0);
+        }
+        System.out.println("3: " + wordCount);
+
+
+
+        //altro ciclo for- creo 'word'  gli assegno i valori di 'words'
+        for (String word : words) {
+
+            //questo ciclo è per la map 'wordCout'!! assegno ad entry TUTTO ciò che ha 'wordCount'
+            for (Map.Entry<String, Integer> entry : wordCount.entrySet()) {
+
+                //"se la key di entry equivale a 'word' allora
+                if (entry.getKey().equals(word)) {
+                    // il value di entry è 'uguale' al suo stesso valore +1"
+                    entry.setValue(entry.getValue()+1); //messo tra le parentesi per RIASSEGNARE IL VALORE!!
+                }
+            }
+        }
+        System.out.println("\n ESERCIZIO 3: " + wordCount);
+
+
+
 
 
         }
@@ -161,4 +198,5 @@ public class Exercises {
      *    Answer: map
      */
 
-}
+
+
