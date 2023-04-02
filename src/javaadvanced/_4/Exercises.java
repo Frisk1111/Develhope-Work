@@ -11,7 +11,7 @@ public class Exercises {
     private static final Path MY_PATH = Paths.get("file.txt");
 
     //qua richiama il percorso della cartella in cui si trova il file! -
-    //così richiamando dopo questo field accedere alla cartella dove è presente il file
+    //così richiamando questo field accedo alla cartella dove è presente il file
     private static final Path PATH_IN_A_FOLDER = Paths.get("mydirectory/file.txt");
 
     public static void main(String[] args) {
@@ -38,7 +38,7 @@ public class Exercises {
                 """;
 
         try {
-            //così penso dovrebbe richiamare il field "MY_PATH" - per da crearlo!
+            //così richiamo il field "MY_PATH" - per da crearlo!
             Files.createFile(MY_PATH);
 
             // Your code here
@@ -46,9 +46,10 @@ public class Exercises {
 
             //richiamo il PATH --percorso-- del file creato dentro il field "MY_PATH"!
             //in questo metodo bisogna prima scrivere il PATH
-            // e dopo ciò che vogliamo aggiungere nel file
+            // e dopo ciò che vogliamo aggiungere nel file !
             //in questo caso aggiungiamo le frase scritte nel 'myString'
-            //si possono usare string e string builder!
+            //si possono usare string, string builder + il metodo 'toString'
+            //oppure scriviamo direttamente tra le virgolette la frase che vogliamo inserire!
             Files.writeString(MY_PATH, myString);
 
 
@@ -63,6 +64,8 @@ public class Exercises {
             //'serve in fase di debugging per capire dove
             //e perché si é verificato il problema' !
             exception.printStackTrace();
+
+            //questo serve per arrestare il programma!
             System.exit(0);
         }
     }
@@ -86,7 +89,7 @@ public class Exercises {
             //end
         } catch (Exception exception) {
 
-            //ome prima- questo è ciò che mi stamperebbe se nel try ci fosse un errore!!
+            //come prima- questo è ciò che mi stamperebbe se nel try ci fosse un errore!
             System.err.println("There was an error!");
             exception.printStackTrace();
             System.exit(0);
@@ -107,22 +110,25 @@ public class Exercises {
             // Your code here
 
             int contatore = 0;
+
+            //così salvo il contenuto in questa string
             String contenutoFile = Files.readString(MY_PATH);
 
 
-            //così ha tutti i contenuti della stringa sopra + lo split!!
+            //così ha tutti i contenuti della stringa sopra divisi tramite il metodo split!
+            //in questo modo divido il contenuto per righe!
             String[] convertitoreArray = contenutoFile.split("\n");
 
 
-            //ciclo for each e passo a 'convertitore' i valori di 'convertitoreArray'
-            //quindi anche lo split di 'contenutoFile'
+            //ciclo for each e passo all'oggetto 'convertitore' i valori di 'convertitoreArray'
+            //quindi anche lo split di 'contenutoFile' !
             for (String convertitore : convertitoreArray) {
 
                 //'se convertitore è diverso da null'
                 if (convertitore != null) {
 
                     //'fai contatore +1' ! -
-                    //così conta le righe nel file!!
+                    //così conta le righe nel file!
                     contatore++;
                 }
 
@@ -149,15 +155,16 @@ public class Exercises {
         try {
             // Your code here
 
+            //come sopra - salvo i contenuti di 'MY_PATH' in questa stringa
             String contenutoFile = Files.readString(MY_PATH);
 
             int contatoreParole = 0;
 
 
-            //ciclo for i che prende come riferimento la lunghezza del contenutoFile
+            //ciclo for i che prende come riferimento la lunghezza della stringa 'contenutoFile'!
             for (int i = 0; i < contenutoFile.length(); i++) {
 
-                //ogni volta che farà il controllo sopra il valore del contatore aumenterà!
+                //ogni volta che farà il controllo il valore del contatore aumenterà!
                 contatoreParole++;
             }
 
