@@ -46,7 +46,7 @@ public class Exercises {
 
             //richiamo il PATH --percorso-- del file creato dentro il field "MY_PATH"!
             //in questo metodo bisogna prima scrivere il PATH
-            // e dopo ciò che vogliamo aggiungere nel file !
+            // e dopo ciò che vogliamo aggiungere nel file
             //in questo caso aggiungiamo le frase scritte nel 'myString'
             //si possono usare string, string builder + il metodo 'toString'
             //oppure scriviamo direttamente tra le virgolette la frase che vogliamo inserire!
