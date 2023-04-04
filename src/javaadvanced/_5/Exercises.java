@@ -10,26 +10,15 @@ public class Exercises {
     public static void main(String[] args) {
 
 
-        //qua invece mi crea il file senza stampare l'errore - penso vada bene?
-        //tanto chiedeva di mettere il printStack nel catch
-        // -
-        // -->>massi va bene!
-//        exercise1();
+        exercise1();
 
-        // usato metodo 'readString' - ma non so se sia giusto
-        //mi lancia il catch però non so se conta come 'aprire il file'
-        //come diceva nella traccia-
-        // -
-        // -->>facciamocelo andar bene dai- funziona almeno!
-//        exercise2();
-
-        // -->>manda perfettamente il messaggio del catch!!
-//        exercise3();
+        exercise2();
 
 
-        //OK trovato giusto metodo per il secondo catch ma invece di stamparmi i catch mi dà
-        // -->>il risultato della divisione - mi dà "infinity" :|
-//       exercise4();
+        exercise3();
+
+        // -->>cambiati i numeri ad int, con i double non andava nemmeno un catch :|
+        exercise4();
     }
 
     /**
@@ -104,6 +93,7 @@ public class Exercises {
         System.out.println("\nExercise 3: ");
         // Your code here
 
+
         String avviso = "\n Attenzione! Input non valido :( \n sicuro che sia un numero intero? \n ";
 
         try {
@@ -116,6 +106,7 @@ public class Exercises {
             exception.printStackTrace();
             System.exit(0);
         }
+
 
     }
 
@@ -133,8 +124,9 @@ public class Exercises {
         // Your code here
 
 
-        double num1 = 10.0;
-        String num2AsString = "0.0";
+        //cambiato ad 'int' perché se con entrambi double mi stampava 'infinity' e non mi dava nemmeno uno dei due catch!
+        int num1 = 10;
+        String num2AsString = "0";
 
         String avvisoFormato = "\n Attenzione! Le due variabili devono avere lo stesso formato ! \n";
 
@@ -143,9 +135,7 @@ public class Exercises {
 
         try {
 
-            //mi stampa 'infitnity'...
-            //BOH
-            System.out.println(num1 / Double.parseDouble(num2AsString));
+            System.out.println(num1 / Integer.parseInt(num2AsString));
 
             //Your catch blocks here
         } catch (NumberFormatException numberFormatException) {
@@ -161,8 +151,6 @@ public class Exercises {
             System.exit(0);
 
         }
-
-
 
 
     }
