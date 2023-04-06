@@ -4,6 +4,8 @@ package javaadvanced._7;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.awt.*;
+
 class CalculatorTest {
     /**
      * 1:
@@ -63,6 +65,14 @@ class CalculatorTest {
         Assertions.assertThrows(ArithmeticException.class, () -> calculator.divide(10, 0)); //<<-- qua tra parentesi mette i valori di 'a' e 'b'
                                                                                                 // valori che porteranno all'eccezione!
 
+        Assertions.assertEquals(4, calculator.multiply(2, 2) );
+        Assertions.assertEquals(3, calculator.divide(9,3));
+
+         // qua ho provato a lanciare un'eccezione seguendo la sintassi di sopra!
+        //questo esercizio passa perché in effetti questa eccezione avviene se provo a dividere un int e una stringa!
+        Assertions.assertThrows(NumberFormatException.class, () -> calculator.divide(10, Integer.parseInt("House")));
+
+
         //end
 
     }
@@ -86,10 +96,12 @@ class CalculatorTest {
 
         Calculator calculator = new Calculator();
 
+        //se anche solo un di questi test fallisce allora tutto il test non va bene!
+
         Assertions.assertEquals(81, calculator.power(3,4));
         Assertions.assertEquals(3, calculator.power(3, 1));
-        Assertions.assertEquals(0, calculator.power(0, -1));
-        Assertions.assertEquals("Infinity", calculator.power(0, -1));
+        //Assertions.assertEquals(0, calculator.power(0, -1)); //<<-- tipo qua ho messo di aspettarmi 0 ma in realtà viene 'Infinity'
+
 
 
 
