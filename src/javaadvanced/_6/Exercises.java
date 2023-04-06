@@ -3,27 +3,18 @@ package javaadvanced._6;
 public class Exercises {
     public static void main(String[] args) {
 
-        //-->> VA SI!!!
+
 //        exercise1();
-
-         //stampa vicino al nome della stagione i mesi corrispondenti- penso va bene
-        //-->> stampa tutti e quettro le stagioni!
+//
 //        exercise2();
-
-
-        //ooK penso di aver trovato un modo per far stampare i colori del semaforo-
-        // penso si abbastanza giusto
-        exercise3();
-
-
-        //-->> VAAA yeee!!
+//
+//        exercise3();
+//
 //        exercise4();
 
-        //-->> non ho proprio idea di ocme fare il metodo nell'enum!
-        //come?? devo fare un altro metodo fuori per poi richiamarlo nell'enum?? boh :((
-//        exercise5();
+        exercise5();
 
-        //almeno so venuti quasi tutti, me ne manca uno!!
+
     }
 
     private enum YouCanUseClassLocalEnumsLikeThis {
@@ -80,7 +71,7 @@ public class Exercises {
             this.values = values;
         }
 
-        //così ritorno i valori scritti tra le parentesi-!!
+        //così ritorno i valori scritti tra le parentesi-!
         //potevo anche scrivere solo i fields con i nomi della settimana e richiamare il costruttore sopra
         // ma questo è per abituarmi a usare di più il getter-!!
         private String getValues() {
@@ -155,20 +146,19 @@ public class Exercises {
         // Your code here
 
 
-
         for (TrafficLight color : TrafficLight.values()) {
 
 
-
-            //ok? ho dato come input il colore di uno delle luci del semaforo
-            if(color.colorOfTheLight.equals("YELLOW") ){
+            //ok? ho dato come input_ il colore di uno delle luci del semaforo
+            if (color.colorOfTheLight.equals("YELLOW")) {
 
                 //con questo passa direttamente agli altri..
                 continue;
 
             }
             //qua mi stampa solo due infatti e non tutti e tre-
-            //quei due che mi stampa dipende cosa metto nell'if!
+            //quei due che mi stampa dipende da
+            // cosa metto nella condizione di sopra tra le virgolette
             System.out.println(color.getColorOfTheLight());
 
         }
@@ -186,11 +176,12 @@ public class Exercises {
         THRID_LIGHT("RED");
 
         String colorOfTheLight;
-        TrafficLight(String colorOfTheLight){
-           this.colorOfTheLight = colorOfTheLight;
+
+        TrafficLight(String colorOfTheLight) {
+            this.colorOfTheLight = colorOfTheLight;
         }
 
-        private String getColorOfTheLight(){
+        private String getColorOfTheLight() {
             return colorOfTheLight;
         }
 
@@ -211,7 +202,7 @@ public class Exercises {
         for (Day giorni : Day.values()) {
 
 
-            if(!giorni.getIsWeekend()){
+            if (!giorni.getIsWeekend()) {
                 //COSì STAMPA PRIMA I VALORI FALSI!!! -
                 //con quel '.name' richiamo i NOMI DEI VALORI!
                 System.out.println("\n" + giorni.name() + " <- is weekend? " + giorni.getIsWeekend() + "\n...oh :((");
@@ -258,64 +249,79 @@ public class Exercises {
 
     }
 
-        /**
-         * 5:
-         * <p>
-         * <p>
-         * Create an enum called "Operator" with the values "ADD", "SUBTRACT", "MULTIPLY", "DIVIDE".
-         * <p>
-         * Write a method that takes two integers and an Operator value as input, performs the corresponding operation on the integers, and returns the result.
-         */
-        private static void exercise5() {
-            System.out.println("\nExercise 5: ");
-            // Your code here
+    /**
+     * 5:
+     * <p>
+     * <p>
+     * Create an enum called "Operator" with the values "ADD", "SUBTRACT", "MULTIPLY", "DIVIDE".
+     * <p>
+     * Write a method that takes two integers and an Operator value as input, performs the corresponding operation on the integers, and returns the result.
+     */
+    private static void exercise5() {
+        System.out.println("\nExercise 5: ");
+        // Your code here
 
-            int num1 = 5;
-            int num2 = 2;
-
-
-        }
-
-        private enum Operator{
-
-            ADD(),
-            SUBTRACT(),
-            MULTIPLY(),
-            DIVIDE();
-
-            //come lo faccio sto metodo??
+        //VALORI DA METTERE COME PARAMETRI D'INGRESSO!
+        int num1 = 5;
+        int num2 = 2;
 
 
-
-//            int num1;
-//            int num2;
-//
-//           Operator(int num1, int num2){
-//               this.num1 = num1;
-//               this.num2 = num2;
-//           }
+        System.out.println("\nRISULTATO ADDIZIONE : " + Operator.ADD(num1, num2));             //<<-- metto i numeri di prima come parametri - così li riassegno nelle funzioni di sotto
+        System.out.println("\nRISULTATO SOTTRAZIONE : " + Operator.SUBTRACT(num1, num2));     //e le funzioni provvederanno a fare le operazioni corrispondenti ai loro nomi
+        System.out.println("\nRISULTATO MOLTIPLICAZIONE : " + Operator.MULTIPLY(num1, num2)); // e alla fine ritornerà il risultato!
+        System.out.println("\nRISULTATO DIVISIONE : " + Operator.DIVIDE(num1, num2));
 
 
-
-        }
-
-        //OK non penso che devo fare altre funzioni, mi chiede di utilizzare l'enum! la dentro dorvei fa il metodo ma come??
-
-
-//        private static Integer Addizione (int num1, int num2){
-//            return num1 + num2;
-//        }
-//
-//        private static Integer sottrazione (int num1, int num2){
-//            return num1 - num2;
-//        }
-//        private static Integer moltiplicazione (int num1, int num2){
-//            return num1 * num2;
-//        }
-//        private static Integer divisione (int num1, int num2){
-//            return num1 / num2;
-//        }
+        //end
     }
+
+
+    //my enum!
+    private enum Operator {
+
+        //ALLORA - ALLORA - ALLORA
+        //definisco prima qua sopra i field!
+        //SEMPRE definirli e dopo gli riassegno i valori facendo delle funzioni!
+        ADD(),
+        SUBTRACT(),
+        MULTIPLY(),
+        DIVIDE();
+
+
+
+        //DEFINISCO questi metodi che chiamo come i field sopra e metto il tipo 'Integer'
+        //metto come parametri due int e dentro faccio l'operazione corrispondente al nome della funzione!
+        //faccio poi il return dell'operazione!!
+
+        static Integer ADD(int num1, int num2) { //<<-- static così richiamo il metodo con il NOME DELLA CLASSE DELL'ENUM!
+
+           int operazione = num1 +num2;
+            return operazione; //<<-- così ritorna il risultato
+        }
+
+        static Integer SUBTRACT(int num1, int num2){ //<<-- static così richiamo il metodo con il NOME DELLA CLASSE DELL'ENUM!
+
+            int operazione = num1 - num2;
+            return operazione; //<<-- così ritorna il risultato
+        }
+
+        static Integer MULTIPLY(int num1, int num2){ //<<-- static così richiamo il metodo con il NOME DELLA CLASSE DELL'ENUM!
+
+            int operazione = num1 * num2;
+            return operazione; //<<-- così ritorna il risultato
+        }
+
+        static Integer DIVIDE(int num1, int num2){ //<<-- static così richiamo il metodo con il NOME DELLA CLASSE DELL'ENUM!
+
+            int operazione= num1 / num2;
+            return operazione; //<<-- così ritorna il risultato
+        }
+    }
+
+    //END enum
+
+
+}
 
 
 
