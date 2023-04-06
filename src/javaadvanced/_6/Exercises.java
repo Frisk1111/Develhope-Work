@@ -4,13 +4,13 @@ public class Exercises {
     public static void main(String[] args) {
 
 
-//        exercise1();
-//
-//        exercise2();
-//
-//        exercise3();
-//
-//        exercise4();
+        exercise1();
+
+        exercise2();
+
+        exercise3();
+
+        exercise4();
 
         exercise5();
 
@@ -44,6 +44,7 @@ public class Exercises {
             System.out.println(giorni.getValues());
         }
 
+        //end
 
     }
 
@@ -98,7 +99,8 @@ public class Exercises {
 
         for (Season Mesi : Season.values()) {
 
-            //meglio uno switch per questo esercizio!!
+            //meglio uno switch per questo esercizio!
+            //così x ogni caso mi stampa i valori a loro assegnati!
             switch (Mesi) {
                 case SPRING -> System.out.println("Spring: " + Mesi.getValues());
                 case SUMMER -> System.out.println("Summer: " + Mesi.getValues());
@@ -120,14 +122,14 @@ public class Exercises {
 
         private String values;
 
-        //così posso mettere più valori tra le parentesi
+        //così posso mettere più valori tra le parentesi!
         Season(String mese1, String mese2, String mese3) {
-            this.values = mese1 + " " + mese2 + " " + mese3;
+            this.values = mese1 + " " + mese2 + " " + mese3; //<-- immagazzino questi più parametri dentro a 'this.values'
         }
 
         //x ritornare i valori
         private String getValues() {
-            return values;
+            return values; //<-- così mi ritornano i mesi con gli spazi!
         }
 
         //END OF MY CODE!
@@ -207,7 +209,7 @@ public class Exercises {
                 //con quel '.name' richiamo i NOMI DEI VALORI!
                 System.out.println("\n" + giorni.name() + " <- is weekend? " + giorni.getIsWeekend() + "\n...oh :((");
             } else {
-                //QUA mi stmapa i valori VERI MESSI Nell'enum 'Day'!!
+                //QUA mi stampa i valori VERI MESSI Nell'enum 'Day'!!
                 System.out.println("\n" + giorni.name() + " <- is weekend? " + giorni.getIsWeekend() + "\n YAAYY :DD");
             }
 
@@ -241,7 +243,7 @@ public class Exercises {
             this.isWeekend = isWeekend;
         }
 
-        //getter così mi ritornano i valori messi prima tra le parentesi!!
+        //getter così mi ritornano i valori messi prima tra le parentesi!
         private Boolean getIsWeekend() {
             return isWeekend;
         }
