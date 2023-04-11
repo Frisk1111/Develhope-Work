@@ -77,7 +77,9 @@ public class Exercises {
             //una frase ci metto dentro il valore di 'mostExpensiveMenuItemName'
 
             if(mostExpensiveMenuItemName == null ||
+                                      //messo tra le parentesi per RIASSEGNARE IL VALORE!!
                     entry.getValue() > menuCostsInEuro.get(mostExpensiveMenuItemName) ){
+
                    // ^
                 //qua sarebbe come dire: "se la value di entry e maggiore di menuCosts
                 // - a cui abbiamo messo tra le parentesi il valore di mostExpensive che equivale a null -
