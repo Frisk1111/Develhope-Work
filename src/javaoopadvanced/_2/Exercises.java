@@ -3,7 +3,9 @@ package javaoopadvanced._2;
 public class Exercises {
     public static void main(String[] args) {
         exercise1();
+
         exercise2();
+
         exercise3();
     }
 
@@ -24,6 +26,14 @@ public class Exercises {
         System.out.println("\nExercise 1: ");
         // Your code here
 
+        Rectangle rettangolo = new Rectangle(7.0, 15.0);
+
+        System.out.println(rettangolo.area());
+
+        Circle cerchio = new Circle(5.0, 10.0);
+        System.out.println(cerchio.area());
+
+
         //end
     }
 
@@ -40,6 +50,20 @@ public class Exercises {
     private static void exercise2() {
         System.out.println("\nExercise 2: ");
         // Your code here
+
+        // istanza di barca!
+        // costruttore vuoto!
+        Boat barca = new Boat();
+
+        System.out.println("\n Barca: " + barca.moveForward() + " "
+                + barca.moveBackward()); //<<-- richiamo i metodi e li stampo
+
+        //istanza di macchina!
+        // costruttore vuoto!
+        Car macchina = new Car();
+
+        System.out.println("\n Macchina: " + macchina.moveForward() + "\n"
+                + macchina.moveBackward()); //<<-- richiamo i metodi e li stampo
 
         //end
     }
@@ -59,6 +83,16 @@ public class Exercises {
     private static void exercise3() {
         System.out.println("\nExercise 3: ");
         // Your code here
+
+        Piano piano = new Piano("Kate", "Yamaha");
+
+        System.out.println("Piano's Owner: " + piano.name() + "|| brand: " + piano.brand()
+                + piano.play());
+
+        Guitar chitarra = new Guitar("Jesse", "Taylor");
+
+        System.out.println("Guitar's Owner: " + chitarra.name() + "|| brand: " + chitarra.brand()
+                + chitarra.play());
 
         //end
     }
