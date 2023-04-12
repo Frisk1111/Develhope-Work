@@ -1,4 +1,4 @@
-package javaadvancedoop._1;
+package javaoopadvanced._1;
 
 //con questo 'extends' vado a 'estendere' la classe 'Animal'!
 //in questo modo in questa classe posso usufruire di tutte le variabili
@@ -31,6 +31,12 @@ public class Dog extends Animal {
 
     String getBreed() {
         return breed;
+    }
+
+    void printDog() {
+        System.out.println("\n razza: " + getBreed() + "\n peso: "
+                + getWeight() + " - altezza: " + getHeight());
+
     }
 
 

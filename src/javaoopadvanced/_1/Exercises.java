@@ -1,8 +1,5 @@
-package javaadvancedoop._1;
+package javaoopadvanced._1;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
 
 public class Exercises {
     public static void main(String[] args) {
@@ -31,7 +28,8 @@ public class Exercises {
 
         Dog dog1 = new Dog(63.0, 32.0, razza);
 
-        System.out.println(dog1.breed);
+        //per stamparlo
+        dog1.printDog();
 
 
         //end
@@ -55,13 +53,18 @@ public class Exercises {
 
         double aperturaAlare = 85.0; //apertura alare del barbagianni messa in cm
 
-        String specie= "Guppy";
+        String specie = "Guppy";
 
         Fish guppy = new Fish(2.0, 0.75, specie);
+
+        //per stamparlo
+        guppy.printFish();
 
         //il peso è in kg- ho messo il peso del barbagianni
         Bird barbagianni = new Bird(33.0, 0.43, aperturaAlare);
 
+        System.out.println("\n Barbagianni: ");
+        barbagianni.printBird();
 
 
         //end
@@ -83,7 +86,6 @@ public class Exercises {
         // Your code here
 
 
-
         Dog dog = new Dog(64.0, 33.0, "Coonhoud");
 
         Fish fish = new Fish(2.0, 1.9, "Sgombro");
@@ -91,16 +93,25 @@ public class Exercises {
         //dati approssimati del condor
         Bird bird = new Bird(130.0, 15.5, 300.0); //apertura alare in cm!
 
+        //per vedere se il condor è più veloce
         double operation = bird.flySpeedMetersPerSecond() - fish.swimSpeedMetersPerSecond()
                 - dog.runSpeedMetersPerSecond();
+
+        //per vedere se il cane è più veloce
         double operation2 = dog.runSpeedMetersPerSecond() - fish.swimSpeedMetersPerSecond()
                 - bird.flySpeedMetersPerSecond();
 
+        //per vedere se il pesce è il più veloce
+        double operation3 = fish.swimSpeedMetersPerSecond() - dog.runSpeedMetersPerSecond()
+                - bird.flySpeedMetersPerSecond();
 
-        if(operation > 0){
-            System.out.println("\nThe bird has the fastest movement!");
+
+        if (operation > 0) {
+            System.out.println("\nThe Condor has the fastest movement! ");
         } else if (operation2 > 0) {
-            System.out.println("\n The dog has the fastest movement!");
+            System.out.println("\n The dog has the fastest movement! ");
+        } else if (operation3 > 0) {
+            System.out.println("\n The fish has the fastest movement! ");
         }
 
 

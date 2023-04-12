@@ -1,4 +1,4 @@
-package javaadvancedoop._1;
+package javaoopadvanced._1;
 
 public class Bird extends Animal {
 
@@ -16,6 +16,11 @@ public class Bird extends Animal {
 
     double getWingSpan() {
         return wingSpan;
+    }
+
+    void printBird(){
+        System.out.println("\n" + getWingSpan() + "\n peso: "
+                + getWeight() + " - altezza: " + getHeight());
     }
 
 

@@ -1,4 +1,4 @@
-package javaadvancedoop._1;
+package javaoopadvanced._1;
 
 public class Fish extends Animal {
 
@@ -16,6 +16,11 @@ public class Fish extends Animal {
 
     String getSpecies() {
         return species;
+    }
+
+    void printFish() {
+        System.out.println("\n" + getSpecies() + "\n peso: "
+                + getWeight() + " - altezza: " + getHeight());
     }
 
     //metodo per l'esercizio 3!
