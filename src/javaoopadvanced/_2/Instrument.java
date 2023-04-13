@@ -7,9 +7,33 @@ package javaoopadvanced._2;
 public abstract class Instrument implements Playable {
 
 
-    abstract String name();
+    String name;
 
-    abstract String brand();
+    String brand;
+
+    //il costruttore può essere implementato nelle classi astratte!
+    Instrument(String name, String brand) {
+        this.name = name;
+        this.brand = brand;
+    }
+
+
+    void setName(String name) {
+        this.name = name;
+    }
+
+    String getName() {
+        return name;
+    }
+
+
+    void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    String getBrand() {
+        return brand;
+    }
 
     //anche qua public altrimenti mi dava errore!
     abstract public String play();

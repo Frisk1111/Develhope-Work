@@ -86,12 +86,12 @@ public class Exercises {
 
         Piano piano = new Piano("Kate", "Yamaha");
 
-        System.out.println("Piano's Owner: " + piano.name() + "|| brand: " + piano.brand()
+        System.out.println("Piano's Owner: " + piano.name + " || brand: " + piano.brand
                 + piano.play());
 
         Guitar chitarra = new Guitar("Jesse", "Taylor");
 
-        System.out.println("Guitar's Owner: " + chitarra.name() + "|| brand: " + chitarra.brand()
+        System.out.println("Guitar's Owner: " + chitarra.name + " || brand: " + chitarra.brand
                 + chitarra.play());
 
         //end
