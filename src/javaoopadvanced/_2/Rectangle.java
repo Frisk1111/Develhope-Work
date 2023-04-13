@@ -6,29 +6,13 @@ package javaoopadvanced._2;
 //quindi anche i metodi in essa prensenti!
 public class Rectangle extends Shape {
 
-    private final double height;
-    private final double width;
+
 
     //così gli do' i valori nel Main tramite l'istanza!
     Rectangle(double height, double width) {
-        this.height = height;
-        this.width = width;
+        super(height, width); //<-- ho già messo un costruttore nello "shape"!
     }
 
-    //metodo presente nella classe astratta 'Shape'!
-    //così li sto usando come un getter!
-    @Override
-    double height() {
-        return this.height;
-    }
-
-
-    //metodo presente nella classe astratta 'Shape'!
-    //così li sto usando come un getter!
-    @Override
-    double width() {
-        return this.width;
-    }
 
     double area() {
         return this.height * this.width;

@@ -5,9 +5,29 @@ package javaoopadvanced._2;
 //hey word: abstract- usato anche per i metodi!
 public abstract class Shape {
 
-    //i metodi ASTRATTI NON hanno un corpo!
-    //quindi NIENTE PARENTESI GRAFFE- solo tonde!
-    abstract double height();
+    //si possono definire variabili nelle classi astratte- anche i costruttori!
+    double height;
 
-    abstract double width();
+    double width;
+
+    public Shape(double height, double width) {
+        this.height = height;
+        this.width = width;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    public double getWidth() {
+        return width;
+    }
+
+    public void setWidth(double width) {
+        this.width = width;
+    }
 }
