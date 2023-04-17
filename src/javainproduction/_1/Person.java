@@ -6,7 +6,7 @@ package javainproduction._1;
 // in questo modo non c'è per niente bisogno di creare a mano un costruttore
 // con i fields visto che lo crea in automatico!
 //INOLTRE crea già in automatico dei getter!!
-public record Person (String name, int age, String favouriteColor){
+record Person (String name, int age, String favouriteColor){
 
     public String toString(){
         return "\n" + name + " - età: " + age
