@@ -92,22 +92,18 @@ public class Exercises {
         //Ovviamente come ogni classe ha delle funzioni per fare diverse operazioni!
         BigDecimal numeroDecimaleGrande = new BigDecimal("0.00000000000000000000000069");
 
-        //metto il divisore dentro un 'BigInteger'
-        BigInteger divisoreTre = new BigInteger("3");
 
         //assegno a questa variabile sempre di tipo 'BigInteger' il valore sarà il risultato
         //della divisione tra 'numeroGrande' e tre!!
-        BigInteger numeroGrandeDivisoPerTre = numeroGrande.divide(divisoreTre);
+        BigInteger numeroGrandeDivisoPerTre = numeroGrande.divide(new BigInteger("3")); //<<-- così non c'è bisogno che lo metto dentro una variabile!
+                                                                                               // Richiamo il costruttore della classe e gli inserisco il divisore!
 
         //risultato!
         System.out.println(numeroGrandeDivisoPerTre);
 
-        //anche qua metto il divisore dentro una variabile di tipo 'BigDecimal'!
-        //fatto il casting a int così non mi lancia la 'ArithmeticException'!
-        BigDecimal divisorePiGreco = new BigDecimal((int) Math.PI);
 
-
-        BigDecimal divisioneDiNumeroDecimaleGrande = numeroDecimaleGrande.divide(divisorePiGreco);
+        BigDecimal divisioneDiNumeroDecimaleGrande = numeroDecimaleGrande.divide(new BigDecimal((int) Math.PI));//<<-- così non c'è bisogno che lo metto dentro una variabile!
+                                                                                                          // Richiamo il costruttore della classe e gli inserisco il divisore!
 
         //risultato!
         System.out.println(divisioneDiNumeroDecimaleGrande);
