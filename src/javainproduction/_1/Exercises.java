@@ -28,7 +28,7 @@ public class Exercises {
         System.out.println("\nExercise 1: ");
         // Your code here
 
-        //così gli faccio il casting a numero intero al risultato che verrà con l'operazione accanto!!
+        //così gli faccio il casting a numero intero al risultato che verrà con l'operazione accanto!
         //ovviamente il risultato cambierà di volta in volta!
         int x = (int) (Math.random() * 100);
 
