@@ -12,13 +12,13 @@ public class Exercises {
 
         exercise1();
 
-        exercise2();
-
-
-        exercise3();
-
-        // -->>cambiati i numeri ad int, con i double non andava nemmeno un catch :|
-        exercise4();
+//        exercise2();
+//
+//
+//        exercise3();
+//
+//        // -->>cambiati i numeri ad int, con i double non andava nemmeno un catch :|
+//        exercise4();
     }
 
     /**
@@ -32,6 +32,7 @@ public class Exercises {
         String avvisoProblema = "\n Errore! Qualcosa è andato storto! :( \n";
 
         try {
+
             Files.createFile(Path.of("Test.txt"));
 
         } catch (Exception exception) {

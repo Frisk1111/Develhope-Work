@@ -161,8 +161,9 @@ public class Exercises {
             int contatoreParole = 0;
 
 
-            //ciclo for i che prende come riferimento la lunghezza della stringa 'contenutoFile'!
-            for (int i = 0; i < contenutoFile.length(); i++) {
+            //ciclo for i che prende come riferimento la lunghezza E LO SPLIT della stringa 'contenutoFile'!
+            // COSì sarebbe come dire 'i minore degli spazi e della lunghezza di contenutoFile'
+            for (int i = 0; i < contenutoFile.split(" ").length; i++) {
 
                 //ogni volta che farà il controllo il valore del contatore aumenterà!
                 contatoreParole++;
