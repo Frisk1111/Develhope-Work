@@ -103,16 +103,14 @@ public class Exercises {
         System.out.println(numeroGrandeDivisoPerTre);
 
         //anche qua metto il divisore dentro una variabile di tipo 'BigDecimal'!
-        BigDecimal divisorePiGreco = new BigDecimal(Math.PI);
+        //fatto il casting a int così non mi lancia la 'ArithmeticException'!
+        BigDecimal divisorePiGreco = new BigDecimal((int) Math.PI);
 
 
-        //mi da 'ArithmeticException'!
-        //"Non-terminating decimal expansion; no exact representable decimal result"
-//        BigDecimal divisioneDiNumeroDecimaleGrande = numeroDecimaleGrande.divide(divisorePiGreco);
+        BigDecimal divisioneDiNumeroDecimaleGrande = numeroDecimaleGrande.divide(divisorePiGreco);
 
         //risultato!
-
-//        System.out.println(divisioneDiNumeroDecimaleGrande);
+        System.out.println(divisioneDiNumeroDecimaleGrande);
 
 
         //end
