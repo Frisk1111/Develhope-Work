@@ -30,6 +30,7 @@ public class Exercises {
      */
     private static void exercise1() {
         System.out.println("\nExercise 1: ");
+        //messo dentro le funzioni perché 'fuori' non me lo trovava!
         List<Integer> ourNumbers = IntStream.range(1, 10).boxed().toList();
 
         // Your code here
