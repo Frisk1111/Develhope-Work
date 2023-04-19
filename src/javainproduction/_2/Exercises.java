@@ -1,5 +1,6 @@
 package javainproduction._2;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.function.Consumer;
@@ -41,6 +42,24 @@ public class Exercises {
 
         // Your code here
 
+
+        //ALLLOOOOORA- con il '.stream' richiamo il metodo '.filter' dove definisco l'operazione
+        ourNumbers.stream()
+
+                //richiamo IL tipo della lista che è un integer e con la '->' indico ciò che deve fare-
+                //cioè deve riportarmi i numeri pari, quindi con il resto uguale '==' a 0!
+                .filter(integer -> integer % 2 == 0)
+
+                //con il collect ridefinisco il tipo di collection che deve ritornare,
+                //in questo caso deve ritornare un Set!
+                .collect(Collectors.toSet())
+
+                //e con il forEach stampo gli elementi all'interno del set!
+                //se provo a scrivere nella stessa sintassi di Greg- cioè 'integer -> System.out.println(ourNumbers)'
+                //mi stampa per 5 volte tutti i numeri-
+                .forEach(System.out::println);
+
+
         //end
     }
 
@@ -60,8 +79,17 @@ public class Exercises {
 
         // Your code here
 
-//        ourNumbers.stream().
+        ourNumbers.stream()
+                //come prima! richiamo il '.filter' e definisco il tipo della lista (sempre un integer)
+                //questa volta dopo il '%2' metto '!=0' visto che i numeri dispari restituiscono un resto diverso da zero!
+                .filter(integer ->  integer %2 != 0)
 
+                //qua dico il tipo di collection che deve ritornare
+                .collect(Collectors.toSet())
+                //e così stampo gli elementi al suo interno, in questo caso
+                //stamperà solo i numeri dispari!
+                //metodo sout suggerito dal programma-
+                .forEach(System.out::println);
         //end
 
 
@@ -87,16 +115,18 @@ public class Exercises {
 
         //ALLOOORA- con il metodo '.stream' posso accedere a ulteriori metodi!
         //come '.map' '.filter' '.collect' ecc..
-        System.out.println(alice.stream()
+        alice.stream()
 
                 //il metodo '.map' che restituirà
                 // "un flusso costituito dai risultati dell'applicazione della funzione data agli elementi di questo flusso"
                 //in questo caso ritornerà le stringhe contenute in 'alice' tutte in maiuscolo!!
-                .map(String::toUpperCase)
+                //questa volta ho scritto l'operazione con il lambda!
+                .map(string -> string.toUpperCase())
 
                 //con il '.collect' posso far ritornare la lista iniziale in altri tipi di Collection!
                 //quindi in Set, in Maps o di nuovo in una List!
-                .collect(Collectors.toSet()));
+                .collect(Collectors.toSet())
+                .forEach(System.out::println);
 
         //end
     }
@@ -118,6 +148,16 @@ public class Exercises {
         //Your code here
         List<Integer> ourNumbers = IntStream.range(1, 10).boxed().toList();
 
+        ourNumbers.stream()
+                //oook qua come l'esercizio num uno per quanto riguarda il filter
+                //uso sempre il lambda per definire l'operazione!
+                .filter(integer -> integer %2 == 0)
+                //anche qua uso il lambda e lo uso per far moltiplicare per due i numeri selezionati nel filter!
+                .map(integer ->  integer *2)
+                //colleziono tutto in un set
+                .collect(Collectors.toSet())
+                //e con il for each stampa!
+                .forEach(System.out::println);
 
         //end
     }
