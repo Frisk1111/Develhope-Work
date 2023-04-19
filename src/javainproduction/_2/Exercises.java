@@ -1,10 +1,6 @@
 package javainproduction._2;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
-import java.util.function.Consumer;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -12,16 +8,12 @@ public class Exercises {
 
     public static void main(String[] args) {
 
-        //boh non l'ho capito
         exercise1();
 
-        //boh non l'ho capito
         exercise2();
 
-        //fatto!
         exercise3();
 
-        //boh non l'ho capito
         exercise4();
     }
 
@@ -56,7 +48,7 @@ public class Exercises {
 
                 //e con il forEach stampo gli elementi all'interno del set!
                 //se provo a scrivere nella stessa sintassi di Greg- cioè 'integer -> System.out.println(ourNumbers)'
-                //mi stampa per 5 volte tutti i numeri-
+                //mi stampa per cinque volte tutti i numeri-
                 .forEach(System.out::println);
 
 
@@ -82,7 +74,7 @@ public class Exercises {
         ourNumbers.stream()
                 //come prima! richiamo il '.filter' e definisco il tipo della lista (sempre un integer)
                 //questa volta dopo il '%2' metto '!=0' visto che i numeri dispari restituiscono un resto diverso da zero!
-                .filter(integer ->  integer %2 != 0)
+                .filter(integer -> integer % 2 != 0)
 
                 //qua dico il tipo di collection che deve ritornare
                 .collect(Collectors.toSet())
@@ -119,7 +111,7 @@ public class Exercises {
 
                 //il metodo '.map' che restituirà
                 // "un flusso costituito dai risultati dell'applicazione della funzione data agli elementi di questo flusso"
-                //in questo caso ritornerà le stringhe contenute in 'alice' tutte in maiuscolo!!
+                //in questo caso ritornerà le stringhe contenute in 'alice' tutte in maiuscolo!
                 //questa volta ho scritto l'operazione con il lambda!
                 .map(string -> string.toUpperCase())
 
@@ -151,9 +143,9 @@ public class Exercises {
         ourNumbers.stream()
                 //oook qua come l'esercizio num uno per quanto riguarda il filter
                 //uso sempre il lambda per definire l'operazione!
-                .filter(integer -> integer %2 == 0)
+                .filter(integer -> integer % 2 == 0)
                 //anche qua uso il lambda e lo uso per far moltiplicare per due i numeri selezionati nel filter!
-                .map(integer ->  integer *2)
+                .map(integer -> integer * 2)
                 //colleziono tutto in un set
                 .collect(Collectors.toSet())
                 //e con il for each stampa!
