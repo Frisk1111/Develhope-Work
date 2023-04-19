@@ -18,6 +18,10 @@ public class Exercises {
     }
 
 
+    //RESO STATIC!
+    //prima non lo era e infatti non me lo trovava
+    private static final List<Integer> ourNumbers = IntStream.range(1, 10).boxed().toList();
+
     /**
      * 1:
      * .
@@ -30,8 +34,6 @@ public class Exercises {
      */
     private static void exercise1() {
         System.out.println("\nExercise 1: ");
-        //messo dentro le funzioni perché 'fuori' non me lo trovava!
-        List<Integer> ourNumbers = IntStream.range(1, 10).boxed().toList();
 
         // Your code here
 
@@ -68,7 +70,6 @@ public class Exercises {
      */
     private static void exercise2() {
         System.out.println("\nExercise 2: ");
-        List<Integer> ourNumbers = IntStream.range(1, 10).boxed().toList();
 
         // Your code here
 
@@ -139,10 +140,9 @@ public class Exercises {
     private static void exercise4() {
         System.out.println("\nExercise 4");
         //Your code here
-        List<Integer> ourNumbers = IntStream.range(1, 10).boxed().toList();
 
         ourNumbers.stream()
-                //oook qua come l'esercizio num uno per quanto riguarda il filter
+                //-OOK qua come l'esercizio num uno per quanto riguarda il filter
                 //uso sempre il lambda per definire l'operazione!
                 .filter(integer -> integer % 2 == 0)
                 //anche qua uso il lambda e lo uso per far moltiplicare per due i numeri selezionati nel filter!
